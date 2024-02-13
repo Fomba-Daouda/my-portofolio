@@ -1,0 +1,112 @@
+.experience_container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+}
+
+.experience_container > div {
+  padding: 2.4rem 5rem;
+  border-radius: 2rem;
+  border: 1px solid #00aeff;
+  cursor: pointer;
+}
+
+.experience_container > div h3 {
+  text-align: center;
+  margin-bottom: 2rem;
+  color: var(--color-primary);
+}
+
+.experience_content {
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: 1fr 1fr;
+  row-gap: 2rem;
+}
+
+.experience_details {
+  display: flex;
+  gap: 1rem;
+}
+
+.experience_details-icon {
+  margin-top: 6px;
+}
+
+.experience_details-icon-html {
+  margin-top: 6px;
+  color: #dc4b26;
+}
+.experience_details-icon-bootstrap {
+  margin-top: 6px;
+  color: #6850a1;
+}
+.experience_details-icon-js {
+  margin-top: 6px;
+  color: #f0da4f;
+}
+
+.experience_details-icon-angular {
+  margin-top: 6px;
+  color: #d60e31;
+}
+.experience_details-icon-react {
+  margin-top: 6px;
+  color: #46c0e7;
+}
+
+.experience_details-icon-css {
+  margin-top: 6px;
+  color: #1a6fb5;
+}
+
+.experience_details-icon-nodeJS {
+  margin-top: 6px;
+  color: #509941;
+}
+
+.experience_details-icon-mongoDB {
+  margin-top: 6px;
+  color: #128e4d;
+}
+
+.experience_details-icon-php {
+  margin-top: 6px;
+  color: #4d588f;
+}
+
+.experience_details-icon-sql {
+  margin-top: 6px;
+  color: #43769d;
+}
+
+.experience_details-icon-springBoot {
+  margin-top: 6px;
+  color: #509941;
+}
+
+/*========== media queries ==========*/
+@media screen and (max-width: 1024px) {
+  .experience_container {
+    grid-template-columns: 1fr;
+  }
+  .experience_container > div {
+    width: 95%;
+    padding: 2rem;
+    margin: 0 auto;
+  }
+  .experience_content {
+    padding-left: 1rem;
+  }
+}
+
+/*========== media small ==========*/
+@media screen and (max-width: 600px) {
+  .experience_container {
+    gap: 1rem;
+  }
+  .experience_container > div {
+    width: 100%;
+    padding: 2rem 1rem;
+  }
+}
