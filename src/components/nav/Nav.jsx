@@ -19,19 +19,15 @@ export default function Nav() {
         <AiOutlineHome></AiOutlineHome>
       </a>
       <a
-        href='#testimonial'
-        onClick={() => setActiveNav('#services')}
-        className={activeNav === '#services' ? 'active' : ''}
-      >
-        <RiServiceLine></RiServiceLine>
-      </a>
-      <a
         href='#about'
         onClick={() => setActiveNav('#about')}
         className={activeNav === '#about' ? 'active' : ''}
       >
         <AiOutlineUser></AiOutlineUser>
       </a>
+
+     
+      
       <a
         href='#experiences'
         onClick={() => setActiveNav('#experiences')}
@@ -39,6 +35,15 @@ export default function Nav() {
       >
         <BiBook></BiBook>
       </a>
+
+      <a
+        href='#testimonial'
+        onClick={() => setActiveNav('#services')}
+        className={activeNav === '#services' ? 'active' : ''}
+      >
+        <RiServiceLine></RiServiceLine>
+      </a> 
+      
       <a
         href='#contact'
         onClick={() => setActiveNav('#contact')}

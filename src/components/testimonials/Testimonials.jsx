@@ -3,7 +3,7 @@ import './testimonials.css'
 import { AiOutlineCheckCircle } from 'react-icons/ai'
 // import Swiper core and required modules
 import { Pagination } from 'swiper'
-
+import { useState } from 'react'
 import { Swiper, SwiperSlide } from 'swiper/react'
 
 // Import Swiper styles
@@ -35,6 +35,7 @@ const data = [
 ]
 
 export default function Testimonials() {
+  const [activeNav, setActiveNav] = useState('#')
   return (
     <section id='testimonial'>
       
@@ -60,14 +61,23 @@ export default function Testimonials() {
                 {missions.map((mission, index) => (
                  <li key={index}>
                    <AiOutlineCheckCircle className='service_list-icon'></AiOutlineCheckCircle>
-                   <h5>{mission}</h5>
+                   <small>{mission}</small>
                   </li>
                 ))}
                 </ul>
             </SwiperSlide>
           )
         })}
+
+        
       </Swiper>
+      <a href='#contact'
+              onClick={() => setActiveNav('#contact')}
+              className={activeNav === '#contact' ? 'active btn' : 'btn'}
+           >
+                 Page Suivante
+          </a>
+      
     </section>
   )
 }

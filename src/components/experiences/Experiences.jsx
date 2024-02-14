@@ -2,8 +2,9 @@ import React from 'react'
 import './experiences.css'
 import { DiSpark} from 'react-icons/di'
 import { SiMysql, SiScikitlearn,SiNumpy,SiGraphql,SiPandas,SiTensorflow,SiKeras,SiPowerbi,SiR ,SiLooker,SiJupyter, SiGooglecloud,SiRstudio,SiLinux , SiPython,SiMicrosoftoffice,SiDocker,SiGit} from 'react-icons/si'
-
+import { useState } from 'react'
 const Experiences = () => {
+  const [activeNav, setActiveNav] = useState('#')
   return (
     <section id='experiences'>
       <h2>Mes différentes compétences</h2>
@@ -179,9 +180,17 @@ const Experiences = () => {
               </div>
             </article>
           </div>
+         
                
         </div>
+       
       </div>
+      <a href='#services'
+              onClick={() => setActiveNav('#services')}
+              className={activeNav === '#services' ? 'active btn' : 'btn'}
+           >
+                 Page Suivante
+          </a>
     </section>
   )
 }

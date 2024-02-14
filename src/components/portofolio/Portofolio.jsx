@@ -3,6 +3,7 @@ import './portofolio.css'
 import ME from '../../assets/univ1.png'
 import ME2 from '../../assets/univ2.png'
 import ME3 from '../../assets/univ3.png'
+import { useState } from 'react'
 const data = [
   {
     id: 1,
@@ -34,6 +35,7 @@ const data = [
 ]
 
 export default function Portofolio() {
+  const [activeNav, setActiveNav] = useState('#')
   return (
     <section id='portofolio'>
       <h2>Formations</h2>
@@ -57,7 +59,15 @@ export default function Portofolio() {
             </article>
           )
         })}
+
+       
       </div>
+      <a href='#testimonial'
+              onClick={() => setActiveNav('#testimonial')}
+              className={activeNav === '#testimonial' ? 'active btn' : 'btn'}
+           >
+                 Page Suivante
+       </a>
     </section>
   )
 }

@@ -1,8 +1,9 @@
 import React from 'react'
 import './services.css'
 import { AiOutlineCheckCircle } from 'react-icons/ai'
-
+import { useState } from 'react'
 export default function Services() {
+  const [activeNav, setActiveNav] = useState('#')
   return (
     <section id='services'>
       <h2>Compétences Générales</h2>
@@ -70,7 +71,16 @@ export default function Services() {
           </ul>
         </article>
         {/* End of ui/ux */}
+
+        
       </div>
+
+         <a href='#testimonial'
+              onClick={() => setActiveNav('#testimonial')}
+              className={activeNav === '#testimonial' ? 'active btn' : 'btn'}
+           >
+                 Page Suivante
+          </a>
     </section>
   )
 }

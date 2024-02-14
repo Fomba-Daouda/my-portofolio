@@ -4,7 +4,9 @@ import ME from '../../assets/linkdin_profile.jpg'
 import { FaAward } from 'react-icons/fa'
 import { FaCarAlt } from "react-icons/fa"
 import { MdTimer } from "react-icons/md"
+import { useState } from 'react'
 const About = () => {
+  const [activeNav, setActiveNav] = useState('#')
   return (
     <section id='about'>
       <h2>A propos de moi</h2>
@@ -46,9 +48,13 @@ const About = () => {
           <p>
           N'hésitez pas à me contacter pour discuter de collaborations potentielles ou pour en savoir plus sur mon parcours professionnel.
           </p>
-          <a href='#contact' className='btn btn-primary'>
-            Contact
-          </a>
+          <a href='#experiences'
+            onClick={() => setActiveNav('#experiences')}
+            className={activeNav === '#experiences' ? 'active btn' : 'btn'}
+
+            >
+              Page Suivante
+            </a>
         </div>
       </div>
     </section>
